@@ -40,14 +40,15 @@ function updateCounts () {
     green: 0,
     invisible: 0
   }
-} 
+  }
   // WRITE CODE HERE TO COUNT BLUE, GREEN, AND INVISIBLE DOTS
 
   // Once you've done the counting, this function will update the display
-  displayTotals(totals)
+      displayTotals(totals)
 
 function displayTotals (totals) {
   for (var key in totals) {
     document.getElementById(key + '-total').innerHTML = totals[key]
   }
+
 }
