@@ -36,19 +36,23 @@ function hide (evt) {
 
 function updateCounts () {
   var totals = {
-    blue: document.getElementsByClassName('blue').length,
-    green: document.getElementsByClassName('green').length,
-    invisible: document.getElementsByClassName(('invisible')[0]).length
+    blue: 0,
+    green: 0,
+    invisible: 0
   }
-  }
-  // WRITE CODE HERE TO COUNT BLUE, GREEN, AND INVISIBLE DOTS
 
+  // WRITE CODE HERE TO COUNT BLUE, GREEN, AND INVISIBLE DOTS
+totals.blue = document.getElementsByClassName('blue').length;
+totals.green = document.getElementsByClassName('green').length;
+totals.invisible = document.getElementsByClassName('invisible').length;
   // Once you've done the counting, this function will update the display
+
+    displayTotals(totals)
+}
 
 function displayTotals (totals) {
   for (var key in totals) {
     document.getElementById(key + '-total').innerHTML = totals[key]
-        displayTotals(totals)
   }
 
 }
